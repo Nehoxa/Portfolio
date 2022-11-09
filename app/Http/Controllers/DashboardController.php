@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
 use Illuminate\Http\Request;
 
-class SkillController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class SkillController extends Controller
      */
     public function index()
     {
-        return 'skill';
+        return Inertia::render('Dashboard');
     }
 
     /**
