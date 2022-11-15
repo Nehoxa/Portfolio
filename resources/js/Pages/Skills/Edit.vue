@@ -1,11 +1,11 @@
 <template>
 
-  <Head title="Nouvelle Compétence" />
+  <Head title="Editer Compétence" />
 
   <AuthenticatedLayout>
     <template #header>
       <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        Nouveau projet
+        Editer Compétence
       </h2>
     </template>
 
@@ -16,36 +16,20 @@
             <InputLabel for="name" value="Name" />
             <TextInput id="name" type="text" class="mt-1 block w-full" v-model="form.name" autofocus
               autocomplete="name" />
-            <InputError class="mt-2" :message="form.errors.name" />
+            <InputError class="mt-2" :message="$page.props.errors.name" />
           </div>
 
-          <div class="mt-2">
-            <InputLabel for="project_url" value="Url du projet" />
-            <TextInput id="project_url" type="text" class="mt-1 block w-full" v-model="form.project_url"
-              autocomplete="project_url" />
-            <InputError class="mt-2" :message="form.errors.project_url" />
-          </div>
-
-          <div class="mt-2">
+          <div class="mt-4">
             <InputLabel for="image" value="Image" />
             <TextInput id="image" type="file"
-              class="block w-full text-sm text-gray-900 bg-gray-50 rounded-md border border-gray-300 cursor-pointer focus:outline-none"
+              class="block w-full text-sm text-gray-900 bg-gray-50 rounded border border-gray-300 cursor-pointer focus:outline-none mt-2"
               @input="form.image = $event.target.files[0]" />
-            <InputError class="mt-2" :message="form.errors.image" />
-          </div>
-
-          <div class="mt-2">
-            <InputLabel for="skills" value="Compétence utilisé" />
-            <select v-model="form.skill_id" id="skill_id" name="skill_id"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-              <option v-for="skill in skills" :key="skill.id" :value="skill.id">{{ skill.name }}</option>
-            </select>
-            <InputError class="mt-2" :message="form.errors.skill_id" />
+            <InputError class="mt-2" :message="$page.props.errors.image" />
           </div>
 
           <div class="flex items-center justify-end mt-4">
             <PrimaryButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-              Créer
+              Enregistrer
             </PrimaryButton>
           </div>
         </form>
@@ -63,20 +47,23 @@ import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import TextInput from '@/Components/TextInput.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
+import { Inertia } from '@inertiajs/inertia';
 
-defineProps({
-  skills: Object,
+const props = defineProps({
+  skill: Object
 });
 
 const form = useForm({
-  name: '',
+  name: props.skill?.name,
   image: null,
-  skill_id: '',
-  project_url: '',
 })
 
 const submit = () => {
-  form.post(route('projects.store'))
+  Inertia.post(`/skills/${props.skill.id}`, {
+    _method: 'put',
+    name: form.name,
+    image: form.image,
+  });
 }
 
 </script>
