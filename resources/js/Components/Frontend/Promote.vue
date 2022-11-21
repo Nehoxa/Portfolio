@@ -1,0 +1,21 @@
+<script setup>
+</script>
+
+<template>
+  <div class="bg-light-tail-100 dark:bg-dark-navy-500">
+    <div class="container mx-auto py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight text-dark-navy-100 dark:text-light-tail-100 sm:text-4xl">
+        <span class="block">Ready to dive in?</span>
+        <span class="block text-dark-primary dark:text-light-primary">Start your free trial today.</span>
+      </h2>
+      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+        <div class="inline-flex rounded-md shadow">
+          <a href="#"
+            class="inline-flex items-center justify-center rounded-md border border-transparent bg-light-secondary dark:bg-dark-secondary px-5 py-3 text-base font-medium text-dark-primary dark:text-white dark:hover:bg-dark-primary hover:bg-light-primary ">
+            Me contacter
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
