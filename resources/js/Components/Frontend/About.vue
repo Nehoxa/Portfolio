@@ -2,8 +2,18 @@
 </script>
 
 <template>
-  <section id="about" class="section py-8 bg-light-primary dark:bg-dark-primary">
-    <div class="container mx-auto">
+  <section id="about" class="section bg-light-primary dark:bg-dark-primary">
+    <div class="container mx-auto"
+    v-motion 
+      :initial="{
+        opacity: 0,
+        y: 100,
+      }" 
+      :visibleOnce="{
+        opacity: 1,
+        y: 0,
+      }"
+    >
       <div class="flex flex-col xl:flex-row gap-24">
         <img class="object-cover h-full w-[566px] md:mx-auto lg:mx-0 rounded-2xl"
           src="http://portfolio.test/img/about.jpg" alt="about">
@@ -33,6 +43,7 @@
               hover:border
               border-dark-primary
               dark:border-light-primary
+              rounded-md
           ">
             Contact me
           </a>

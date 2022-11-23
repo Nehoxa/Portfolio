@@ -30,8 +30,19 @@ const submit = () => {
 </script>
 
 <template>
-  <section class="section bg-light-primary dark:bg-dark-primary">
-    <div class="container mx-auto">
+  <section id="contact" class="section bg-light-primary dark:bg-dark-primary">
+    <div 
+      class="container mx-auto" 
+      v-motion 
+      :initial="{
+        opacity: 0,
+        y: 100,
+      }" 
+      :visibleOnce="{
+        opacity: 1,
+        y: 0,
+      }"
+    >
       <div class="flex flex-col items-center text-center">
         <h2 class="section-title">Contact Me</h2>
         <p class="subtitle">
@@ -110,11 +121,24 @@ const submit = () => {
               <span v-if="form.errors.email" class="text-sm m-2 text-red-400">{{ form.errors.email }}</span>
             </div>
           </div>
-          <textarea v-model="form.body" class="textarea" name="body" id="body" cols="30" rows="10"
-            spellcheck="false" placeholder="Your message..."></textarea>
+          <textarea v-model="form.body" class="textarea" name="body" id="body" cols="30" rows="10" spellcheck="false"
+            placeholder="Your message..."></textarea>
           <span v-if="form.errors.body" class="text-sm m-2 text-red-400">{{ form.errors.body }}</span>
-          <button class="btn btn-lg bg-accent hover:bg-secondary text-white rounded-md">
-            Send body
+          <button class="
+              btn btn-md
+              text-dark-primary
+              dark:text-light-primary
+              bg-accent
+              hover:bg-light-secondary hover:text-light-tail-500
+              dark:hover:bg-dark-secondary dark:hover:text-dark-navy-100
+              md:btn-lg
+              hover:border
+              border-dark-primary
+              dark:border-light-primary
+              rounded-md
+              transition-all
+            ">
+            Send message
           </button>
         </form>
       </div>
