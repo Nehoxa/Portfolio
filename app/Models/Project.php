@@ -2,23 +2,24 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Project extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'skill_id',
         'name',
         'image',
         'project_url'
     ];
 
-    public function skill(): BelongsTo
+    protected $with = ['skills'];
+
+    public function skills(): BelongsToMany
     {
-        return $this->belongsTo(Skill::class);
+        return $this->belongsToMany(Skill::class);
     }
 }

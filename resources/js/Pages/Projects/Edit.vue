@@ -36,11 +36,11 @@
 
           <div class="mt-2">
             <InputLabel for="skills" value="Compétence utilisé" />
-            <select v-model="form.skill_id" id="skill_id" name="skill_id"
+            <select multiple v-model="form.skill_id" id="skill_id" name="skill_id"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
               <option v-for="skill in skills" :key="skill.id" :value="skill.id">{{ skill.name }}</option>
             </select>
-            <InputError class="mt-2" :message="$page.props.errors.skill_id" />
+            <InputError class="mt-2" :message="form.errors.skill_id" />
           </div>
 
           <div class="flex items-center justify-end mt-4">

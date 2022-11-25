@@ -26,7 +26,7 @@ defineProps({
         capitalize
         text-accent text-sm
         mb-3
-      ">{{ project.skill.name }}</span>
+      ">{{ project.skills.name }}</span>
   <h3 class="
         group-hover:text-light-tail-500
         text-2xl

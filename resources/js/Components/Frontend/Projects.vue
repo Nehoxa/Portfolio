@@ -16,8 +16,9 @@ const filterProjects = (id) => {
     selectedSkill.value = id
   } else {
     filteredProjects.value = props.projects.data.filter((project) => {
-      return project.skill.id === id;
+      return project.skills.map(i => i['id']).includes(id);
     });
+    console.log(filteredProjects.value);
     selectedSkill.value = id
   }
 }
@@ -46,6 +47,7 @@ const filterProjects = (id) => {
                 ? 'bg-accent'
                 : 'bg-light-tail-500 dark:bg-dark-navy-100',
             ]">
+            <pre>{{ projectSkill.id }} | </pre>
             {{ projectSkill.name }}
           </button>
         </li>

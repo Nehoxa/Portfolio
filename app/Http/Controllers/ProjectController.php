@@ -19,7 +19,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = ProjectResource::collection(Project::with('skill')->get());
+        $projects = ProjectResource::collection(Project::all());
         return Inertia::render('Projects/Index', compact('projects'));
     }
 
@@ -50,12 +50,12 @@ class ProjectController extends Controller
 
         if($request->hasFile('image')) {
             $image = $request->file('image')->store('projects');
-            Project::create([
+            $project = Project::create([
                 'name' => $request->name,
                 'image' => $image,
                 'project_url' => $request->project_url,
-                'skill_id' => $request->skill_id
             ]);
+            $project->skills()->sync($request->skill_id);
 
             return  Redirect::route('projects.index')->with(['message' => 'Projet créé !', 'class' => 'flex p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg']);
         }
@@ -99,8 +99,8 @@ class ProjectController extends Controller
             'name' => $request->name,
             'image' => $image,
             'project_url' => $request->project_url,
-            'skill_id' => $request->skill_id,
         ]);
+        $project->skills()->sync($request->skill_id);
 
         return Redirect::route('projects.index')->with(['message' => 'Projet édité !', 'class' => 'flex p-4 mb-4 text-sm bg-blue-100  text-blue-700 rounded-lg']);
     }

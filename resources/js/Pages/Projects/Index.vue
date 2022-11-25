@@ -65,7 +65,7 @@
                 <img class="h-12 w-12" :src="project.image" />
               </td>
               <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                {{ project.skill.name }}
+                <div v-for="skill in project.skills" :key="skill.id">{{ skill.name }}</div>
               </th>
               <td class="py-4 px-6">
                 <Link :href="project.project_url">{{ project.project_url }}</Link>

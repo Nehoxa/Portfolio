@@ -12,7 +12,7 @@
         <div class="inline-flex rounded-md shadow">
           <a href="#"
             class="inline-flex items-center justify-center rounded-md border border-transparent bg-light-secondary dark:bg-dark-secondary px-5 py-3 text-base font-medium text-dark-primary dark:text-white dark:hover:bg-dark-primary dark:hover:text-dark-navy-100 hover:bg-light-primary">
-            Me contacter
+            GitHub
           </a>
         </div>
       </div>
