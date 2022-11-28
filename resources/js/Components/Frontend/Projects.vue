@@ -18,7 +18,6 @@ const filterProjects = (id) => {
     filteredProjects.value = props.projects.data.filter((project) => {
       return project.skills.map(i => i['id']).includes(id);
     });
-    console.log(filteredProjects.value);
     selectedSkill.value = id
   }
 }
