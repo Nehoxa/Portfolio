@@ -46,7 +46,6 @@ const filterProjects = (id) => {
                 ? 'bg-accent'
                 : 'bg-light-tail-500 dark:bg-dark-navy-100',
             ]">
-            <pre>{{ projectSkill.id }} | </pre>
             {{ projectSkill.name }}
           </button>
         </li>

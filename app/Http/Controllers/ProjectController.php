@@ -102,7 +102,7 @@ class ProjectController extends Controller
         ]);
         $project->skills()->sync($request->skill_id);
 
-        return Redirect::route('projects.index')->with(['message' => 'Projet édité !', 'class' => 'flex p-4 mb-4 text-sm bg-blue-100  text-blue-700 rounded-lg']);
+        return Redirect::route('projects.index')->with(['message' => 'Projet édité !', 'class' => 'flex p-4 mb-4 text-sm bg-blue-100 text-blue-700 rounded-lg']);
     }
 
     /**
