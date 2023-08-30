@@ -55,7 +55,7 @@ class SkillController extends Controller
             return  Redirect::route('skills.index')->with(['message' => 'Compétence créée !', 'class' => 'flex p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg']);
         }
 
-    return Redirect::back();
+        return Redirect::back();
     }
 
     /**
