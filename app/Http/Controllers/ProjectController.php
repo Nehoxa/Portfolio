@@ -49,7 +49,7 @@ class ProjectController extends Controller
         ]);
 
         if($request->hasFile('image')) {
-            $image = $request->file('image')->store('projects');
+            $image = $request->file('image')->store('public/projects');
             $project = Project::create([
                 'name' => $request->name,
                 'image' => $image,
@@ -60,7 +60,7 @@ class ProjectController extends Controller
             return  Redirect::route('projects.index')->with(['message' => 'Projet créé !', 'class' => 'flex p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg']);
         }
 
-    return Redirect::back();
+        return Redirect::back();
     }
 
     /**
