@@ -49,7 +49,7 @@ class ProjectController extends Controller
         ]);
 
         if($request->hasFile('image')) {
-            $image = $request->file('image')->store('public/projects');
+            $image = $request->file('image')->store('projects');
             $project = Project::create([
                 'name' => $request->name,
                 'image' => $image,
