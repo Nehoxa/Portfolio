@@ -136,7 +136,7 @@
           </div>
         </div>
         <div class="flex flex-1 justify-end items-center h-full mt-8 md:mt-0">
-          <img class="rounded-lg" src="/storage/img/Hero.jpg" alt="Hero">
+          <img class="rounded-lg" src="storage/img/Hero.jpg" alt="Hero">
         </div>
       </div>
     </div>
