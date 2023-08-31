@@ -16,7 +16,7 @@
     >
       <div class="flex flex-col xl:flex-row gap-24">
         <img class="object-cover h-full w-[566px] md:mx-auto lg:mx-0 rounded-2xl"
-          src="storage/img/about.jpg" alt="about">
+          src="http://209.38.197.77/storage/img/about.jpg" alt="about">
         <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
           <div class="flex flex-col pb-6">
             <h2 class="text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3">
