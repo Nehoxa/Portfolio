@@ -44,11 +44,9 @@ const submit = () => {
       }"
     >
       <div class="flex flex-col items-center text-center">
-        <h2 class="section-title">Contact Me</h2>
+        <h2 class="section-title">Contactez-moi</h2>
         <p class="subtitle">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus dolores corrupti numquam delectus quos
-          ut nemo odit, incidunt deleniti dignissimos enim magni. Deserunt illo dolorem saepe voluptas nesciunt et
-          beatae?
+          Pour toute question, n'hésitez pas à me contacter via le formulaire ci-dessous !
         </p>
       </div>
       <div class="flex flex-col lg:flex-row lg:gap-x-8">
@@ -74,9 +72,9 @@ const submit = () => {
               </svg>
             </div>
             <div>
-              <h4 class="font-body text-xl mb-1">Have a question?</h4>
-              <p class="mb-1 text-paragraph">I am here to help you.</p>
-              <p class="text-accent font-normal">Email me at loirejulien@outlook.fr</p>
+              <h4 class="font-body text-xl mb-1">J'ai une question ?</h4>
+              <p class="mb-1 text-paragraph">Je suis là pour vous aidez.</p>
+              <p class="text-accent font-normal">Envoyez moi un email à loirejulien@outlook.fr</p>
             </div>
           </div>
           <div class="flex flex-col lg:flex-row gap-x-4">
@@ -101,9 +99,8 @@ const submit = () => {
               </svg>
             </div>
             <div>
-              <h4 class="font-body text-xl mb-1">Current Location</h4>
+              <h4 class="font-body text-xl mb-1">Location</h4>
               <p class="mb-1 text-paragraph">Nancy, France.</p>
-              <p class="text-accent font-normal">Serving clients worldwide.</p>
             </div>
           </div>
         </div>
@@ -113,16 +110,16 @@ const submit = () => {
           </div>
           <div class="flex gap-8">
             <div>
-              <input type="text" id="name" v-model="form.name" class="input" placeholder="Your Name">
+              <input type="text" id="name" v-model="form.name" class="input" placeholder="Votre Nom">
               <span v-if="form.errors.name" class="text-sm m-2 text-red-400">{{ form.errors.name }}</span>
             </div>
             <div>
-              <input type="email" id="email" v-model="form.email" class="input" placeholder="Your Email">
+              <input type="email" id="email" v-model="form.email" class="input" placeholder="Votre Email">
               <span v-if="form.errors.email" class="text-sm m-2 text-red-400">{{ form.errors.email }}</span>
             </div>
           </div>
           <textarea v-model="form.body" class="textarea" name="body" id="body" cols="30" rows="10" spellcheck="false"
-            placeholder="Your message..."></textarea>
+            placeholder="Votre message..."></textarea>
           <span v-if="form.errors.body" class="text-sm m-2 text-red-400">{{ form.errors.body }}</span>
           <button class="
               btn btn-md
@@ -138,7 +135,7 @@ const submit = () => {
               rounded-md
               transition-all
             ">
-            Send message
+            Envoyez le message
           </button>
         </form>
       </div>

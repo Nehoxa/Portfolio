@@ -20,33 +20,17 @@
         <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
           <div class="flex flex-col pb-6">
             <h2 class="text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3">
-              About Me
+              À Propos de moi
             </h2>
-            <p class="mb-4 text-accent">Freelance backend Web developer</p>
-            <hr class="mb-8 opacity-90 dark:opacity-5">
+            <p class="mb-4 text-accent">Backend Web developer</p>
+            <hr class="mb-4 opacity-90 dark:opacity-5">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, asperiores! Ipsum dolorem magni hic
-              nulla et, omnis laboriosam neque maiores iusto nihil. Quia unde voluptate reiciendis voluptatibus!
-              Dolorem, qui culpa! <br>
-              <br>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tenetur vel est aut totam laboriosam,
-              eligendi soluta et fuga repellat. Quia obcaecati voluptates deleniti quisquam pariatur magni, culpa sit
-              laboriosam.
+              Passionné de code, je suis un développeur autodidacte. <br>
+              Je recherche activement mon premier poste en tant que développeur web, prêt à plonger dans l'univers du développement backend tout en étant tout à fait à l'aise avec le frontend. <br>
+              Mon parcours autodidacte m'a armé d'une polyvalence et d'une détermination sans faille pour relever les défis technologiques. <br>
+              Découvrez mon portfolio et laissez-moi vous montrer comment je peux apporter une valeur ajoutée à votre équipe.
             </p>
           </div>
-          <a href="#contact" class="btn btn-md 
-              text-dark-primary
-              dark:text-light-primary
-              bg-accent
-              hover:bg-light-secondary hover:text-light-tail-500
-              dark:hover:bg-dark-secondary dark:hover:text-dark-navy-100
-              hover:border
-              border-dark-primary
-              dark:border-light-primary
-              rounded-md
-          ">
-            Contact me
-          </a>
         </div>
       </div>
     </div>
