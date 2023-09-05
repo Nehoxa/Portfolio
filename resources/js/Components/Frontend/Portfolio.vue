@@ -8,7 +8,7 @@ defineProps({
 });
 </script>
 <template>
-  <section id="portfolio" class="section bg-light-primary dark:bg-dark-primary min-h-[1400px]">
+  <section id="portfolio" class="section bg-light-primary dark:bg-dark-primary">
     <div class="container mx-auto"
     v-motion 
       :initial="{
