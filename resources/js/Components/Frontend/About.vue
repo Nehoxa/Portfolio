@@ -3,17 +3,7 @@
 
 <template>
   <section id="about" class="section bg-light-primary dark:bg-dark-primary">
-    <div class="container mx-auto"
-    v-motion 
-      :initial="{
-        opacity: 0,
-        y: 100,
-      }" 
-      :visibleOnce="{
-        opacity: 1,
-        y: 0,
-      }"
-    >
+    <div class="container mx-auto">
       <div class="flex flex-col xl:flex-row gap-24">
         <img class="object-cover h-full w-[566px] md:mx-auto lg:mx-0 rounded-2xl"
           src="/storage/img/about.jpg" alt="about">
