@@ -68,7 +68,7 @@
                 <div v-for="skill in project.skills" :key="skill.id">{{ skill.name }}</div>
               </th>
               <td class="py-4 px-6">
-                <Link :href="project.project_url">{{ project.project_url }}</Link>
+                <a :href="project.project_url">{{ project.project_url }}</a>
               </td>
               <td class="py-4 px-6">
                 <div class="flex justify-end">
