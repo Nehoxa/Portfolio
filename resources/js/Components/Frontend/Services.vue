@@ -84,10 +84,9 @@
                 d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
             </svg>
           </div>
-          <h4 class="text-xl font-medium mb-2">Branding</h4>
+          <h4 class="text-xl font-medium mb-2">SQL</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
-            perferendis volm quibusdam ullam qui dolore.
+            Créer et exploiter une base de données.
           </p>
         </div>
         <div class="bg-light-tail-100 dark:bg-dark-navy-500 p-6 rounded-2xl">
@@ -108,10 +107,9 @@
                 d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
             </svg>
           </div>
-          <h4 class="text-xl font-medium mb-2">SEO</h4>
+          <h4 class="text-xl font-medium mb-2">GIT</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
-            perferendis volm quibusdam ullam qui dolore.
+            Utilisation de GIT pour votre projet.
           </p>
         </div>
       </div>
